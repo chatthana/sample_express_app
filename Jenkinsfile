@@ -16,6 +16,11 @@ pipeline {
         sh 'npm install -s'
       }
     }
+    stage('Test') {
+      steps {
+        sh 'mocha spec'
+      }
+    }
     stage('Temporary Finish') {
       steps {
         echo 'Ok! stop at this point first'
