@@ -23,7 +23,9 @@
   "homepage": "https://github.com/chatthana/sample_express_app#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
     "express": "^4.16.3",
+    "mocha": "^5.1.1",
     "morgan": "^1.9.0"
   }
 }
