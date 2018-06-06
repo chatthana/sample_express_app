@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'bash mocha-hook.sh'
+        sh 'bash pretest.sh'
       }
     }
     stage('Temporary Finish') {
