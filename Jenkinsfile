@@ -29,6 +29,7 @@ pipeline {
     stage('Check Version') {
       steps {
         sh 'node --version'
+        echo 'Finished'
       }
     }
   }
