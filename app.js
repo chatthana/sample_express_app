@@ -11,7 +11,8 @@ app.use(logger('dev'));
 app.get('/', (req, res, next) => {
   return res.json({
     status: '000',
-    message: 'Success'
+    message: 'Success',
+    user: null
   });
 });
 
