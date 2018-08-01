@@ -28,8 +28,19 @@ pipeline {
   stages {
     stage('Check Version') {
       steps {
+        echo 'Checking the version ...'
         sh 'node --version'
-        echo 'Finished'
+      }
+    }
+    stage('Run test suites') {
+      steps {
+        echo 'Running all test suites ...'
+        input 'Go further?'
+      }
+    }
+    stage('Deploy to the target server') {
+      steps {
+        echo 'Deploying the application ...'
       }
     }
   }
