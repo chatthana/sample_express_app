@@ -12,7 +12,8 @@ app.get('/', (req, res, next) => {
   return res.json({
     status: '000',
     message: 'Success',
-    user: null
+    user: null,
+    checkoutRef: '00-x1'
   });
 });
 
