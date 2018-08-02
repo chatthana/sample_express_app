@@ -16,9 +16,21 @@ pipeline {
         input 'Go further?'
       }
     }
-    stage('Deploy to the target server') {
+    stage('Deploy to the staging server') {
+      when {
+        branch 'develop'
+      }
       steps {
-        echo 'Deploying the application ...'
+        echo 'Deploying the application to the staging server ...'
+      }
+    }
+    stage('Deploy to the production server') {
+      when {
+        branch 'master'
+      }
+      steps {
+        input 'Would you like to go further for the production promotion?'
+        echo 'Deploy the application to the production server'
       }
     }
   }
