@@ -13,7 +13,6 @@ pipeline {
     stage('Run test suites') {
       steps {
         echo 'Running all test suites ...'
-        input 'Go further?'
       }
     }
     stage('Deploy to the staging server') {
