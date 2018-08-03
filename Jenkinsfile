@@ -6,7 +6,7 @@ pipeline {
     stage('Check Version') {
       steps {
         echo 'Checking the version ...'
-        echo env.BRANCH_NAME
+        echo branch
         sh 'node --version'
       }
     }
