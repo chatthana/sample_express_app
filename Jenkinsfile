@@ -20,6 +20,7 @@ pipeline {
         branch 'develop'
       }
       steps {
+        input 'Would you like to deploy to the staging server'
         echo 'Deploying the application to the staging server ...'
       }
     }
