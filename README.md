@@ -1,3 +1,3 @@
 # Sample Express Application
 -
-For system integration
+For system integration testing
