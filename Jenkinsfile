@@ -8,7 +8,7 @@ pipeline {
       steps {
         echo 'Building the image'
         script {
-          appImage = docker.build 'chatthana/sample_express_app:latest'
+          appImage = docker.build 'skilllane-platform/sample_express_app:latest'
         }
       }
     }
