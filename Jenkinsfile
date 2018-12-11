@@ -1,11 +1,14 @@
 pipeline {
   agent any
+  environment {
+    appImage = ''
+  }
   stages {
     stage('Build the image') {
       steps {
         echo 'Building the image'
         script {
-          def app = docker.build 'chatthana/sample_express_app:latest'
+          appImage = docker.build 'chatthana/sample_express_app:latest'
         }
       }
     }
@@ -14,7 +17,7 @@ pipeline {
         echo 'Pushing the image to the registry'
         script {
           docker.withRegistry('', 'DKH-1') {
-            app.push()
+            appImage.push()
           }
         }
       }
