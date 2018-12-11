@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build the image') {
       steps {
-        sh 'echo $(whoami)'
+        sh 'docker ps'
       }
     }
   }
