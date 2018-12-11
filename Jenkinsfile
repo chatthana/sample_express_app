@@ -5,10 +5,7 @@ pipeline {
   stages {
     stage('Build the image') {
       steps {
-        echo 'Building the image ...'
-        script {
-          docker.build 'chatthana/sample_express_app:latest'
-        }
+        sh 'echo $(whoami)'
       }
     }
   }
