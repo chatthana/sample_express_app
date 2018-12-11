@@ -8,7 +8,7 @@ pipeline {
       steps {
         echo 'Building the image'
         script {
-          appImage = docker.build 'chatthana/sample_express_app:latest'
+          appImage = docker.build 'chatthana/sample_express_app:${env.BUILD_NO}'
         }
       }
     }
@@ -16,7 +16,7 @@ pipeline {
       steps {
         echo 'Pushing the image to the registry'
         script {
-          docker.withRegistry('', 'DKH-1') {
+          docker.withRegistry('https://asia.gcr.io', 'gcr:skilllane-platform') {
             appImage.push()
           }
         }
